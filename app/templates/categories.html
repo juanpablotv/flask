@@ -23,6 +23,9 @@ categorias
             <td>{{cat.category}}</td>
             <td>{{ cat.description }}</td>
             <td>Editar / Eliminar</td>
+            <td>
+                <a href="{{ url_for('update')}}"></a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>

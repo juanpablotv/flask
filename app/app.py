@@ -52,6 +52,16 @@ def create_cat():
             return redirect(url_for('categories'))   
 
     return render_template('create_cat.html')
+
+@app.route('/categories/<int:id>/update/')
+def update_cat(id):
+    return f"vamos a editar con id {id}"
+
+@app.route('/categories/<int:id>/delete/')
+def delete_cat(id):
+    cat = Category.get(id)
+    cat.delete()
+    return redirect(url_for('categories'))
  
 @app.errorhandler(404)
 def page_not_found(error):
