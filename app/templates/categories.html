@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title%}
+categorias
+{% endblock %}
+
+{% block content %}
+<a href="{{ url_for('create_cat') }}" class="btn">Nueva Categoria</a>
+<br>
+<table id="categories">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Categories</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cat in cats %}
+        <tr>
+            <td>{{ cat.id }}</td>
+            <td>{{cat.category}}</td>
+            <td>{{ cat.description }}</td>
+            <td>Editar / Eliminar</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}    

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+    drinks
+{% endblock %}
+
+title
+
+menu
+{% block content %}
+<h1>mis bebidas favoritas</h1>
+
+<ul>
+    {% for i in drinks %}
+    <li>{{ i }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
+
+
+
+
+
